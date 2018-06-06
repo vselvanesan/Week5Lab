@@ -19,11 +19,10 @@
         // add the HTML Element to the page somewhere 
         // in this case I'm attaching a button to the first forml element
         document.forms[0].appendChild(cancelButton);
-
-        document.title = "Contact";
+        console.log(location.pathname);
+        document.title = "Contact Page";
         // use the history object to wipe out the url 
-        history.pushState("", document.title, "/contact");
-
+        history.pushState("", document.title, "/ContactPage");
 
         // use the location object to output my pathname
         console.log(location.pathname);

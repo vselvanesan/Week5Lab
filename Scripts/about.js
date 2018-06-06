@@ -1,5 +1,5 @@
-(function(content){
-   
+(function (content) {
+
 
     function ReturnPI() {
         return Math.PI;
@@ -16,16 +16,36 @@
 
         paragraph.textContent = mySentence;
 
-        let myArray = [
-            { name: "Tom", age: 25 },
-            { name: "Bob", age: 35 },
-            { name: "Mike", age: 45 },
-            { name: "Juan", age: 55 },
-            { name: "Smyth", age: 65 }
+        let myArray = [{
+                name: "Tom",
+                age: 25
+            },
+            {
+                name: "Bob",
+                age: 35
+            },
+            {
+                name: "Mike",
+                age: 45
+            },
+            {
+                name: "Juan",
+                age: 55
+            },
+            {
+                name: "Smyth",
+                age: 65
+            }
         ];
 
-        myArray.push({ name: "Carol", age: 15 });
-        myArray.unshift({ name: "Jake", age: 45 });
+        myArray.push({
+            name: "Carol",
+            age: 15
+        });
+        myArray.unshift({
+            name: "Jake",
+            age: 45
+        });
 
         let content = document.getElementsByClassName("content");
         console.log("myArray length: " + myArray.length);
@@ -78,6 +98,18 @@
 
 
         console.log(myFavouritesList);
+
+        console.log(location.pathname);
+        document.title = "About Page";
+        // use the history object to wipe out the url 
+        history.pushState("", document.title, "/AboutPage");
+
+
+        // use the location object to output my pathname
+        console.log(location.pathname);
+
+        // show your hostname - domain name
+        console.log(location.hostname);
     }
 
     // properties
